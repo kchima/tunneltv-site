@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TunnelTV — WireGuard VPN for Apple TV</title>
+    <meta name="description" content="A straightforward WireGuard VPN client for Apple TV. Import your own standard configuration. No account required. One-time purchase.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; background: #f8f9fa; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+        header { text-align: center; padding: 3rem 0 2rem; }
+        header h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; }
+        header p { color: #666; font-size: 1.2rem; margin-top: 0.5rem; }
+        .hero { text-align: center; padding: 2rem 0 3rem; }
+        .hero h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; }
+        .hero p { color: #555; max-width: 600px; margin: 0 auto 1.5rem; }
+        .badge { display: inline-block; background: #007aff; color: #fff; padding: 0.75rem 2rem; border-radius: 24px; font-weight: 600; text-decoration: none; font-size: 1.1rem; }
+        .badge:hover { background: #0056b3; }
+        .badge.coming { background: #888; cursor: default; }
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; padding: 2rem 0; }
+        @media (max-width: 600px) { .features { grid-template-columns: 1fr; } }
+        .feature { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .feature h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .feature p { color: #666; font-size: 0.95rem; }
+        .pricing { text-align: center; padding: 2rem 0; }
+        .pricing .price { font-size: 2rem; font-weight: 700; }
+        .pricing .note { color: #888; font-size: 0.9rem; margin-top: 0.5rem; }
+        .faq { padding: 2rem 0; }
+        .faq h2 { margin-bottom: 1.5rem; }
+        .faq-item { margin-bottom: 1.5rem; }
+        .faq-item h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .faq-item p { color: #555; font-size: 0.95rem; }
+        .security { background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 1rem; margin: 1.5rem 0; font-size: 0.95rem; }
+        .security strong { color: #856404; }
+        footer { text-align: center; padding: 2rem 0; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; margin-top: 2rem; }
+        footer a { color: #666; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        hr { border: none; border-top: 1px solid #eee; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TunnelTV</h1>
+            <p>A straightforward WireGuard VPN client for Apple TV</p>
+        </header>
+
+        <div class="hero">
+            <h2>Use your own WireGuard configuration. No account required.</h2>
+            <p>TunnelTV is a simple, generic WireGuard client for Apple TV with tvOS 17+. Import a standard wg-quick configuration from your VPN provider, a self-hosted server, or any WireGuard-compatible service — then connect from the couch.</p>
+            <p>TunnelTV does not provide VPN servers, a VPN subscription, or a TunnelTV account. You bring your own configuration.</p>
+            <br>
+            <span class="badge coming">Coming soon on the App Store</span>
+        </div>
+
+        <div class="security">
+            <strong>⚠ Security note:</strong> Browser import sends your configuration (including private key) over plain HTTP on your local network. The server runs only while the Import screen is open and is protected by a one-time PIN. Use only on a trusted home network.
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Browser import</h3>
+                <p>Open a URL on your phone or computer, enter the PIN shown on your TV, and paste your config. No USB, no network shares.</p>
+            </div>
+            <div class="feature">
+                <h3>Manual entry</h3>
+                <p>Type or paste configuration fields directly on the Apple TV. Pairs well with the iPhone keyboard.</p>
+            </div>
+            <div class="feature">
+                <h3>Multiple tunnels</h3>
+                <p>Save and switch between several configurations. Each is a standard system VPN profile.</p>
+            </div>
+            <div class="feature">
+                <h3>Live status</h3>
+                <p>See real handshake time, received and sent data — not just a "Connected" indicator.</p>
+            </div>
+            <div class="feature">
+                <h3>Always-on reconnect</h3>
+                <p>Optional automatic reconnect after a reboot or network change. One tunnel at a time.</p>
+            </div>
+            <div class="feature">
+                <h3>Stale-handshake disconnect</h3>
+                <p>Optional disconnect when a previously-healthy peer stops responding, so you know the tunnel is actually down.</p>
+            </div>
+        </div>
+
+        <div class="pricing">
+            <p class="price">$19.99</p>
+            <p>One-time purchase. No subscription, no account, no backend.</p>
+            <p class="note">Includes a 3-day free trial. Works with any standard WireGuard configuration.</p>
+        </div>
+
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>Does TunnelTV include a VPN service?</h3>
+                <p>No. TunnelTV is a client that connects to your existing WireGuard configuration from a provider or your own server. You bring the config.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What do I need to use it?</h3>
+                <p>An Apple TV (HD or 4K) running tvOS 17 or later, and a standard WireGuard wg-quick configuration file.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I import a configuration?</h3>
+                <p>Open the app, choose "Import from Browser," then open the displayed URL on any device on the same network. Enter the PIN shown on your TV, paste your config, and save. You can also enter configuration fields manually.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is browser import secure?</h3>
+                <p>The import page is served over plain HTTP on your local network, only while the Import screen is open. A one-time PIN (shown on the TV) and a Host-header check prevent unauthorized submissions. Do not use Browser Import on an untrusted network such as public Wi-Fi, hotels, or cafes.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Why does Apple TV ask to add a VPN configuration?</h3>
+                <p>tvOS requires permission before a VPN tunnel can be created. This is a standard system prompt — approve it once per tunnel.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What does "Disconnect on stale handshake" do?</h3>
+                <p>When enabled, the app disconnects if a previously-working WireGuard peer stops responding. This is not a traffic-blocking kill switch — normal routing may resume after the disconnect.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How does the trial work?</h3>
+                <p>You get 3 days of full access starting from first launch. After that, the app requires a one-time $19.99 purchase. Restore Purchases is available if you've already bought the app on another device.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What should I include in a support email?</h3>
+                <p>Your Apple TV model, tvOS version, app version, whether you used Browser Import or manual entry, and a description of the issue. If you have the on-screen tunnel log, include it — but <strong>never email a private key or full configuration file</strong>.</p>
+            </div>
+        </div>
+
+        <hr>
+        <p style="text-align:center; color:#666;">
+            Compatible with standard WireGuard configurations from any provider, including Mullvad, AirVPN, IVPN, and self-hosted servers.
+        </p>
+        <p style="text-align:center; color:#999; font-size:0.85rem; margin-top:0.5rem;">
+            WireGuard is a registered trademark of Jason A. Donenfeld.
+        </p>
+
+        <footer>
+            <p>
+                <a href="support.html">Support</a> &middot;
+                <a href="privacy.html">Privacy Policy</a>
+            </p>
+            <p>Contact: <a href="mailto:support@tunneltv.app">support@tunneltv.app</a></p>
+            <p style="margin-top:0.5rem;">&copy; 2026 Keith Chima</p>
+        </footer>
+    </div>
+</body>
+</html>

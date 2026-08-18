@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — TunnelTV</title>
+    <meta name="description" content="Privacy policy for TunnelTV, a WireGuard VPN client for Apple TV.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; background: #f8f9fa; line-height: 1.6; }
+        .container { max-width: 700px; margin: 0 auto; padding: 2rem 1.5rem; }
+        header { text-align: center; padding: 2rem 0; }
+        header h1 { font-size: 2rem; }
+        header a { color: #007aff; text-decoration: none; }
+        p { margin-bottom: 1rem; color: #444; }
+        h2 { margin-top: 2rem; margin-bottom: 0.75rem; }
+        h3 { margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        li { color: #444; margin-bottom: 0.5rem; }
+        footer { text-align: center; padding: 2rem 0; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; margin-top: 2rem; }
+        .effective { color: #888; font-style: italic; margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="index.html">TunnelTV</a> / Privacy Policy</h1>
+        </header>
+
+        <p class="effective">Effective date: To be set before release</p>
+
+        <h2>Overview</h2>
+        <p>TunnelTV is a WireGuard VPN client for Apple TV. It does not operate a VPN service, does not provide VPN servers, and does not have a user account system. This privacy policy explains what data the app accesses, stores, and transmits.</p>
+
+        <h2>Data stored on device</h2>
+        <h3>WireGuard configurations</h3>
+        <p>Your imported WireGuard configurations — including the private key — are stored in the system VPN preferences (per-tunnel NETunnelProviderManager providerConfiguration). This is the same storage model used by the official WireGuard iOS/macOS app and other third-party WireGuard integrations. The private key is part of the configuration text and is not stored separately in the Keychain in the current version.</p>
+
+        <h3>Trial start date</h3>
+        <p>A timestamp of your first app launch is stored in local device storage (UserDefaults) to track the 3-day trial period. This is not synced to iCloud and does not leave your device.</p>
+
+        <h3>Purchase state</h3>
+        <p>Your in-app purchase status is managed by Apple's StoreKit 2 and is stored on-device and in Apple's systems. TunnelTV does not receive or store your payment information.</p>
+
+        <h3>Tunnel log</h3>
+        <p>The app maintains a recent-history log of tunnel events (connection, disconnection, errors) in a shared app-group container. This log is visible within the app and can be cleared by the user. It is not transmitted off-device except in crash reports if Sentry is enabled (see below).</p>
+
+        <h2>Network access</h2>
+        <h3>Browser Import (local HTTP server)</h3>
+        <p>When you choose Import from Browser, the app starts a temporary HTTP server on your local network. This server is available only while the Import screen is visible. It serves a page that accepts a WireGuard configuration via POST request. The configuration (including private key) is transmitted over unencrypted HTTP on your local network. The server is protected by a one-time PIN shown on the TV and a Host-header check. Do not use this feature on untrusted networks.</p>
+
+        <h3>No analytics or telemetry</h3>
+        <p>TunnelTV does not use advertising, behavioral analytics, or third-party tracking services. The app does not collect usage statistics, browsing activity, or VPN traffic data.</p>
+
+        <h2>Crash reporting</h2>
+        <p>TunnelTV uses Sentry for crash and error diagnostics. When enabled, Sentry may collect:</p>
+        <ul>
+            <li>Crash logs and stack traces</li>
+            <li>Device model, OS version, and app version</li>
+            <li>Limited tunnel lifecycle events (start, stop, error types)</li>
+        </ul>
+        <p>VPN private keys, full configuration files, and browsing activity are not sent. IP addresses are not intentionally collected. You can disable crash reporting at any time by removing the Sentry DSN configuration (in the app's source code, this is a developer action).</p>
+        <p>If Sentry is not configured (DSN is blank), no data is sent to Sentry.</p>
+
+        <h2>Third-party services</h2>
+        <ul>
+            <li><strong>App Store / StoreKit 2</strong> — Apple processes all payment transactions. TunnelTV does not receive payment data.</li>
+            <li><strong>Sentry</strong> — Crash and error diagnostics (see above). Sentry's privacy policy applies: <a href="https://sentry.io/privacy/">sentry.io/privacy</a></li>
+        </ul>
+
+        <h2>Data deletion</h2>
+        <p>To delete all data stored by TunnelTV:</p>
+        <ol>
+            <li>Delete all tunnels within the app (each tunnel is removed from system VPN preferences).</li>
+            <li>Delete the app from your Apple TV.</li>
+        </ol>
+        <p>In-app purchases are managed by Apple and can be requested through Apple's support channels.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>If this policy is updated, the effective date at the top will change. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+        <h2>Contact</h2>
+        <p>Keith Chima<br>Email: <a href="mailto:support@tunneltv.app">support@tunneltv.app</a><br>Website: <a href="https://tunneltv.app">tunneltv.app</a></p>
+    </div>
+</body>
+</html>

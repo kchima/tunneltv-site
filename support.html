@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — TunnelTV</title>
+    <meta name="description" content="Support for TunnelTV, a WireGuard VPN client for Apple TV.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; background: #f8f9fa; line-height: 1.6; }
+        .container { max-width: 700px; margin: 0 auto; padding: 2rem 1.5rem; }
+        header { text-align: center; padding: 2rem 0; }
+        header h1 { font-size: 2rem; }
+        header a { color: #007aff; text-decoration: none; }
+        h2 { margin-top: 2rem; margin-bottom: 1rem; }
+        p, li { color: #444; margin-bottom: 0.75rem; }
+        ul { padding-left: 1.5rem; }
+        footer { text-align: center; padding: 2rem 0; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; margin-top: 2rem; }
+        .warning { background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 1rem; margin: 1.5rem 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="index.html">TunnelTV</a> / Support</h1>
+        </header>
+
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:support@tunneltv.app">support@tunneltv.app</a></p>
+        <p>This is a solo project. Replies within approximately 48 hours.</p>
+
+        <div class="warning">
+            <strong>Never email your private key or a full .conf configuration file.</strong>
+            Include only the information listed below.
+        </div>
+
+        <h2>What to include in your support request</h2>
+        <ul>
+            <li>Apple TV model (HD or 4K, generation if known)</li>
+            <li>tvOS version (Settings → About → tvOS version)</li>
+            <li>App version (shown in About &amp; Support in the app)</li>
+            <li>Whether you used Browser Import or manual entry</li>
+            <li>Your VPN provider or whether you're self-hosting</li>
+            <li>Any on-screen tunnel log entries (from the Tunnel Log screen)</li>
+            <li>A clear description of the issue and steps to reproduce</li>
+        </ul>
+
+        <h2>Common issues</h2>
+
+        <h3>Browser Import doesn't work</h3>
+        <p>Make sure both devices are on the same local network. Some routers have "client isolation" or "AP isolation" enabled, which prevents devices from communicating with each other. Check your router settings. Also ensure the browser has Local Network permission on iOS/macOS (Settings → Privacy → Local Network).</p>
+
+        <h3>VPN won't connect</h3>
+        <p>Verify your configuration works with another WireGuard client first. Check the Tunnel Log in the app for error messages. If you're using a provider that requires a username and password (rather than a key-based config), that provider likely uses OpenVPN, which is not supported.</p>
+
+        <h3>The app says "Trial expired" but I already purchased</h3>
+        <p>Use the "Restore Purchases" button on the paywall screen. If that doesn't work, ensure you're signed in to the same Apple Account that made the purchase.</p>
+    </div>
+</body>
+</html>
